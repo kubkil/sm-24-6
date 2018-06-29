@@ -40,7 +40,7 @@ it('calls onScoreUpdate', () => {
   const playerComponent = shallow(<PlayersList players={players} onScoreUpdate={mockedOnScoreUpdate} />);
   const firstPlayer = playerComponent.find(Player).first();
   const onPlayerScoreChange = firstPlayer.prop('onPlayerScoreChange');
-  onPlayerScoreChange(10);
 
+  onPlayerScoreChange(10);
   expect(mockedOnScoreUpdate).toBeCalledWith(0, 10);
 });
