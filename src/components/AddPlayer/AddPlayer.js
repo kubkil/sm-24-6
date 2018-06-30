@@ -8,7 +8,7 @@ const AddPlayer = (props) => {
   const onSubmit = (event) => {
     event.preventDefault();
     props.onPlayerAdd(inputPlayerName.value);
-    inputPlayerName = '';
+    inputPlayerName.value = '';
   }
 
   return (
