@@ -51,11 +51,17 @@ it('should delete a player and update player state', () => {
   ]
   appComponent.setState({ players });
   const onPlayerRemove = appComponent.find(PlayersList).prop('onPlayerRemove');
+
   console.log(onPlayerRemove);
+
   onPlayerRemove(1);
+
   console.log(onPlayerRemove());
+
   const playersAfterUpdate = appComponent.state('players');
+
   console.log(playersAfterUpdate);
   console.log(playersAfterUpdate.length);
+
   expect(playersAfterUpdate.length).toEqual(1);
 });
