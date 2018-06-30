@@ -8,7 +8,6 @@ it('renders without crashing', () => {
 
 it('calls onPlayerAdd with correct name', () => {
   const mockedOnPlayerAdd = jest.fn();
-  // onPlayerAdd? dlaczego nie onSubmit? AddPlayer linia 10
   const addPlayerComponent = mount(<AddPlayer onPlayerAdd={mockedOnPlayerAdd} />);
   // getDOMNode() działa tylko w trybie mount
   const nameInput = addPlayerComponent.find('input').first().getDOMNode();
