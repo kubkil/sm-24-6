@@ -22,7 +22,7 @@ it('renders correct number of players', () => {
   const expectedPlayersNumber = playerComponent.find(Player).length;
 
   expect(expectedPlayersNumber).toEqual(2);
-})
+});
 
 it('calls onScoreUpdate', () => {
   const players = [
