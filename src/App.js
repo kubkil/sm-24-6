@@ -7,7 +7,10 @@ class App extends Component {
     super();
 
     this.state = {
-      players: []
+      players: [{
+        name: 'ABC',
+        score: 0
+      }]
     }
   }
 
@@ -25,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PlayersList players={this.state.players} />
+        <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} />
       </div>
     );
   }
