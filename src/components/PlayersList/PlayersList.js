@@ -4,6 +4,7 @@ import './PlayersList.css';
 
 const PlayersList = (props) => (
   <ul className="PlayersList">
+    {/* players? app.js players? */}
     {props.players.map((player, i) => (
       <Player
         key={i}
