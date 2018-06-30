@@ -2,11 +2,11 @@ import Player from './Player';
 import React from 'react';
 import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
+it('should render without crashing', () => {
   shallow(<Player />);
 });
 
-it('renders correct name', () => {
+it('should render correct name', () => {
   const playerNamePassed = 'Ania';
   const playerComponent = shallow(<Player name={playerNamePassed} />);
 
@@ -15,7 +15,7 @@ it('renders correct name', () => {
   expect(playerNameRendered).toEqual(playerNamePassed);
 });
 
-it('renders correct score', () => {
+it('should render correct score', () => {
   const playerScorePassed = -10;
   const playerComponent = shallow(<Player score={playerScorePassed} />);
 
@@ -44,4 +44,14 @@ it('should call onPlayerScoreChange with -1 when minus button is clicked', () =>
   plusButton.simulate('click');
 
   expect(mockedOnPlayerScoreChange).toBeCalledWith(-1);
+});
+
+it('should call onPlayerRemove when button is clicked', () => {
+  const mockedOnPlayerRemove = jest.fn();
+  const playerComponent = shallow(<Player onPlayerRemove={mockedOnPlayerRemove} />);
+
+  const removeButton = playerComponent.find('.Player__remove');
+  removeButton.simulate('click');
+
+  expect(mockedOnPlayerRemove).toBeCalled();
 });
