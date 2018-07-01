@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPlus, faMinus, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faPlus, faMinus, faTrashAlt)
 
 class App extends Component {
   constructor() {
