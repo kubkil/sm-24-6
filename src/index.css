@@ -2,4 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* dlaczego nie działa? */
+  box-sizing: border-box;
+  font-family: 'Libre Baskerville', serif;
 }

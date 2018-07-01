@@ -1,4 +1,7 @@
 .PlayersList {
   border: 1px solid black;
   list-style-type: none;
+  padding: 0 2rem;
+  max-width: 750px;
+  width: 100%;
 }

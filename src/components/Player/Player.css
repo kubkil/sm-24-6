@@ -1,3 +1,30 @@
 .Player {
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+.Heading,
+.Player__name,
+.Player__score,
+.Player__button,
+.Player__remove {
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.Heading {
+  font-weight: bold;
+}
+
+.Player__name,
+.Player__score {
+  align-self: center;
+}
+
+.Icon {
+  cursor: pointer;
+  padding: 1rem;
 }
