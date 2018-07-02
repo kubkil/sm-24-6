@@ -5,7 +5,6 @@ import '../Player/Player.css';
 
 const PlayersList = (props) => (
   <ul className="PlayersList">
-    {/* players? app.js players? idzie z App w dół*/}
     <li className="Player">
       <span className="Heading">Name</span>
       <span className="Heading">Points</span>
