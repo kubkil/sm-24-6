@@ -31,7 +31,6 @@ class App extends Component {
     const newPlayer = {
       name: playerName,
       score: 0,
-      // id?
     }
     this.setState({
       players: [...this.state.players, newPlayer]
